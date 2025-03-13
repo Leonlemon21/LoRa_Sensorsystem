@@ -1,0 +1,32 @@
+Hier ist eine Auflistung von allen Libraries welche wir verwendet haben während der Entwicklung des Programms.
+Diese müssen in der Arduino IDE in der Library sektion runtergeladen werden.
+
+1. 	Arduino Uno WiFi Dev Ed Library
+2. 	Adafruit BME280 Library
+3. 	Adafruit BusIO
+4. 	Adafruit CCS811 Library
+5. 	Adafruit GFX Library
+6. 	Adafruit SH110X
+7. 	Adafruit SSD1306
+8.	Adafruit Unified Sensor
+9. 	BME280
+10. 	ESP32 AnalogWrite
+11.	ESP8266 and ESP32 OLED driver for SSD1306 displays
+12. 	GFX Library for Arduino
+13. 	Heltec ESP32 Dev-Boards
+14.	Heltec_ESP32_LoRa_v3
+15.	HotButton
+16.	LoRaWAN_ESP32
+17.	MQ7Sensor
+18.	MQUnifiedsensor
+19.	RadioLib
+20.	SH1106
+21.	SSD1306wire
+22.	TTN_esp32
+
+
+Vergessen Sie bitte auch nicht den passenden Driver fürs ESP32 Board runterzuladen damit Sie das richtige Board in der Arduino IDE wählen können. 
+(https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+Später wenn Sie denn gegebenen Code ausführen wollen, wählen Sie das WiFi LoRa 32(V3) Board aus. 
+Des weiteren gibt es im Code stellen wo Sie ihre Daten eingeben müssen damit das Board weiß mit welchem Gerät es sprechen muss diese sind im Code gekennzeichnet.
