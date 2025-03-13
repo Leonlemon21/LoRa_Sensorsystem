@@ -1,5 +1,5 @@
 Hier ist eine Auflistung von allen Libraries welche wir verwendet haben während der Entwicklung des Programms.
-Diese müssen in der Arduino IDE in der Library sektion runtergeladen werden.
+Diese müssen in der Arduino IDE in der Library Manager runtergeladen werden.
 
 1. 	Arduino Uno WiFi Dev Ed Library
 2. 	Adafruit BME280 Library
@@ -24,9 +24,14 @@ Diese müssen in der Arduino IDE in der Library sektion runtergeladen werden.
 21.	SSD1306wire
 22.	TTN_esp32
 
-
 Vergessen Sie bitte auch nicht den passenden Driver fürs ESP32 Board runterzuladen damit Sie das richtige Board in der Arduino IDE wählen können. 
 (https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+In der Arduino IDE im Board Manager müssen Sie die folgenden Boards runterladen:
+
+1. 	Arduino AVR Boards
+2.	esp32
+3.	Heltec ESP32 Series Dev-boards
 
 Später wenn Sie denn gegebenen Code ausführen wollen, wählen Sie das WiFi LoRa 32(V3) Board aus. 
 Des weiteren gibt es im Code stellen wo Sie ihre Daten eingeben müssen damit das Board weiß mit welchem Gerät es sprechen muss diese sind im Code gekennzeichnet.
