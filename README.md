@@ -27,7 +27,21 @@ Nun müssen wir uns den MQTT Explorer herunterladen, um die empfangenen Informat
 
 Anschließend öffnen Sie den MQTT Explorer. Dort werden Sie nun aufgefordert, sich mit den entsprechenden Informationen anzumelden. Alle benötigten Zugangsdaten und Informationen finden Sie in TTN.
 
-Nachdem wir nun sämtliche Daten über MQTT empfangen, können wir uns der GUI zuwenden. Ähnlich wie zuvor beim ESP32-Board müssen wir nun der GUI mitteilen, woher sie ihre Informationen beziehen soll. Geben Sie dazu im Code unter dem Abschnitt „MQTT“ alle relevanten Informationen ein, um die Verbindung zum Server herzustellen.
+Nachdem wir nun sämtliche Daten über MQTT empfangen, können wir uns der GUI zuwenden. Ähnlich wie zuvor beim ESP32-Board müssen wir nun der GUI mitteilen, woher sie ihre Informationen beziehen soll. Öffnen Sie dementsprechend im GUI ordner die main.py Datei. Geben Sie im Code unter dem Abschnitt „MQTT“ alle relevanten Informationen ein, um die Verbindung zum Server herzustellen und nun können Sie die Python Datei ausführen oder sich eine EXE erstellen lassen.
+
+Dafür müssen Sie di folgenden Befehle in ihrer Hauptkonsole ausführen: 
+PyInstaller installieren:
+Öffne ein Terminal (oder das PyCharm-Terminal) und führe folgenden Befehl aus:
+
+  pip install pyinstaller
+
+In dein Projektverzeichnis wechseln:
+Navigiere in der Konsole in das Verzeichnis, in dem deine Hauptdatei (z. B. main.py) liegt mit dem cd Befehl.
+
+EXE erstellen:
+Führe Sie den folgenden Befehl aus:
+
+  pyinstaller --onefile --windowed main.py
 
 Damit sind Sie auch schon fertig. Im unteren Abschnitt der GUI können Sie nun sämtliche Informationen Ihrer Sensoren einsehen, während der obere Bereich als Planungstool genutzt werden kann.
 
