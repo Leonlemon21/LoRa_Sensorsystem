@@ -1,0 +1,39 @@
+function decodeFloatLE(bytes, offset) {
+  // Reconstruct a 32-bit float from 4 bytes in little-endian order
+  let bits =
+    (bytes[offset + 3] << 24) |
+    (bytes[offset + 2] << 16) |
+    (bytes[offset + 1] << 8)  |
+    (bytes[offset + 0]);
+  
+  let sign = (bits >>> 31 === 0) ? 1.0 : -1.0;
+  let exponent = (bits >>> 23) & 0xFF;
+  let mantissa = (exponent === 0)
+    ? (bits & 0x7FFFFF) << 1
+    : (bits & 0x7FFFFF) | 0x800000;
+  
+  let f = sign * mantissa * Math.pow(2, exponent - 150);
+  return f;
+}
+
+function decodeUplink(input) {
+  let bytes = input.bytes;
+  
+  // Expect exactly 24 bytes (6 floats * 4 bytes each)
+  if (bytes.length !== 24) {
+    return {
+      errors: ["Invalid payload length: expected 24 bytes for 6 floats"]
+    };
+  }
+  
+  return {
+    data: {
+      bmeTemp: decodeFloatLE(bytes, 0),
+      bmeHum: decodeFloatLE(bytes, 4),
+      bmePres: decodeFloatLE(bytes, 8),
+      ccsECO2: decodeFloatLE(bytes, 12),
+      ccsTVOC: decodeFloatLE(bytes, 16),
+      mq7Value: decodeFloatLE(bytes, 20)
+    }
+  };
+}

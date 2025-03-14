@@ -10,11 +10,11 @@ from PIL import Image, ImageTk, ImageDraw, ImageFont, ImageOps, ImageFilter
 import datetime
 
 # ===================== MQTT-Zugangsdaten =====================
-MQTT_BROKER = "eu1.cloud.thethings.network"
-MQTT_PORT = 8883
-MQTT_USERNAME = "esp32-jf1@ttn"
-MQTT_PASSWORD = "NNSXS.KRRCOKWPCV62NNE44JO5KCV2ETBSLYQLQWYNPPA.SIKWIRONBZIEFLNY7WG5SC24ZT5ZK4UZPRTTIGT6SEMVCUT2HMIQ"
-MQTT_TOPIC = "v3/esp32-jf1@ttn/devices/+/up"
+MQTT_BROKER = ""
+MQTT_PORT =
+MQTT_USERNAME = ""
+MQTT_PASSWORD = ""
+MQTT_TOPIC = ""
 mqtt_client = None
 
 SERIAL_PORT = "COM3"
